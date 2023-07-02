@@ -7,23 +7,14 @@ using System.Threading.Tasks;
 
 namespace MauiApp1.ViewModels
 {
-    public class Proxy
-    {
-        public string Name { get; set; } = "";
-        public string Description { get; set; } = "";
-        public string InternalUrl { get; set; } = "";
-        public string ExternalUrl { get; set; } = "";
-    }
-
-
-    public class MainViewModel : BaseViewModel
+    public class ProxiesViewModel : BaseViewModel
     {
         private string _title = "Hello, World!";
         public string Title { get => _title; set => SetBackingField(ref _title, value); }
 
         public ObservableCollection<Proxy> Proxies { get; set; } = new();
 
-        public MainViewModel()
+        public ProxiesViewModel()
         {
             Proxies.Add(new Proxy
             {

@@ -20,8 +20,8 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-        builder.Services.AddSingleton<MainPage>();
-        builder.Services.AddSingleton<MainViewModel>();
+        builder.Services.AddSingleton<ProxiesPage>();
+        builder.Services.AddSingleton<ProxiesViewModel>();
 
 		return builder.Build();
 	}

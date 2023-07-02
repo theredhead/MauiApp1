@@ -2,11 +2,11 @@
 
 namespace MauiApp1;
 
-public partial class MainPage : ContentPage
+public partial class ProxiesPage : ContentPage
 {
-    private MainViewModel myViewModel;
+    private ProxiesViewModel myViewModel;
 
-    public MainPage(MainViewModel viewModel)
+    public ProxiesPage(ProxiesViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = myViewModel = viewModel;
