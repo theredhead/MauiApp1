@@ -12,9 +12,12 @@ namespace MauiApp1.ViewModels
 
         protected void SetBackingField<T>(ref T field, T value, [CallerMemberName] string name = null) where T : IComparable<T>
         {
-            PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(name));
-            field = value;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+            if ( field.CompareTo(value) != 0)
+            {
+                PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(name));
+                field = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+            }
         }
     }
 }
